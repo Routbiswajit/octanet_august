@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: #D0D4D5;
+    position: relative;
+}
+
+#nav {
+    height: 110px;
+    padding: 0 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav img {
+    height: 35px;
+    margin-right: 170px;
+}
+
+#nav-prt1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-prt1 h4 {
+    margin-right: 50px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#nav-pid2 {
+    padding: 0px;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+#nav-pid2 i {
+    margin-right: 50px;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+#content {
+    width: 100%;
+    height: calc(100% - 110px);
+    position: relative;
+    display: flex;
+}
+
+#left {
+    width: 37%;
+    height: 100%;
+    padding: 50px 120px;
+}
+
+#left h5 {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #535353;
+}
+
+#left h1 {
+    font-size: 60px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+#left p {
+    font-size: 15px;
+    margin-bottom: 45px;
+    width: 130%;
+}
+
+#left button {
+    background-color: black;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 33px;
+    border-radius: 50px;
+    border-top-left-radius: 1px;
+    text-transform: uppercase;
+}
+#left button {
+    background-color: #000; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+#left button:hover {
+    background-color: #fff; 
+    color: #000; 
+    box-shadow: 0 0 50px 0 rgba(210, 127, 120, 0.277), 
+                0 0 40px 0 rgba(212, 125, 103, 0.5),
+                0 0 55px 0 rgba(226, 136, 136, 0.5),
+                0 0 50px 0 rgba(230, 147, 147, 0.5); 
+}
+
+
+
+#right {
+    height: 100%;
+    width: 65%;
+    position: relative;
+    padding: 75px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#right::-webkit-scrollbar {
+    display: none;
+}
+
+.elem {
+    height: 500px;
+    width: 370px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 11px;
+    margin-right: 20px;
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.elem img {
+    height: 90%;
+    width: 100%;
+    top: 0%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.elem h4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #D0D4D5;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+.elem h5 {
+    position: absolute;
+    bottom: 7%;
+    right: 0;
+    background-color: black;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 15px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+h4:hover{
+    color: rgb(172, 52, 102);
+    cursor: pointer;
+}
+.elem:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+    cursor: pointer; 
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        
+        transform: translateX(calc(-100% - 730px));
+
+    }
+}
+.elem img{
+    transition: margin 0.4s ease;
+}
+.elem img:hover{
+    margin-top: -40px;
+}
